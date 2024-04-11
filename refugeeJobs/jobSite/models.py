@@ -1,7 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
 class CustomUser(AbstractUser):
     bio = models.TextField("Biography", blank=True)
     skills = models.CharField(max_length=255, blank=True)
