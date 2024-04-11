@@ -9,11 +9,13 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)  # Log the user in directly after registration
-            return redirect('home')  # Redirect to a home page or dashboard
+            return redirect('test')  # Redirect to a home page or dashboard
     else:
         form = CustomUserCreationForm()
     return render(request, 'jobSite/register.html', {'form': form})
 
 def all_posts(request):
     posts = JobPost.objects.all()
-    return render(request, 'jobSite/test.html', {'posts': posts})
+    context_dict={"user":request.user}
+    context_dict['posts']=posts
+    return render(request, 'jobSite/test.html', context_dict)
