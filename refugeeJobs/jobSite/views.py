@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import CustomUserCreationForm
-
+from .models import JobPost
 def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
