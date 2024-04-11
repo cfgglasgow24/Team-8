@@ -15,3 +15,9 @@ def register(request):
 
 def home(request):
     return render(request, 'jobSite/home.html')
+
+def all_posts(request):
+    posts = JobPost.objects.all()
+    context_dict={"user":request.user}
+    context_dict['posts']=posts
+    return render(request, 'jobSite/test.html', context_dict)

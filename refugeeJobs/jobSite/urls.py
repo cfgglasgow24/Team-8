@@ -3,6 +3,8 @@ from django.urls import include, path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', views.register, name='register'),# Include the URLs from myapp
-    path('home/', views.home, name='home')
+    path('register/', views.register, name='register'),
+    path('home/', views.register, name='home'),
+    path('test/', views.all_posts, name='test')
+    # Include the URLs from myapp
 ]
