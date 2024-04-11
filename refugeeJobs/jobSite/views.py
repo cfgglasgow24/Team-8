@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import CustomUserCreationForm
+from .models import JobPost
 
 def register(request):
     if request.method == 'POST':
@@ -12,3 +13,7 @@ def register(request):
     else:
         form = CustomUserCreationForm()
     return render(request, 'jobSite/register.html', {'form': form})
+
+def all_posts(request):
+    posts = JobPost.objects.all()
+    return render(request, 'jobSite/test.html', {'posts': posts})
