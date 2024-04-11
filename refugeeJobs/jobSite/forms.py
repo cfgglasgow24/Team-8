@@ -8,6 +8,7 @@ class CustomUserCreationForm(UserCreationForm):
     language = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Languages you speak...'}))
     education = forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Your educational background...'}))
     experience = forms.CharField(required=False, widget=forms.Textarea(attrs={'rows': 3, 'placeholder': 'Describe your work experience...'}))
+    requirements = forms.CharField(required=False, widget=forms.Textarea(attrs={'placeholder':'Part-Time or Full-Time'}))
 
     class Meta:
         model = get_user_model()

@@ -18,7 +18,12 @@ def home(request):
     return render(request, 'jobSite/home.html')
 
 def all_posts(request):
-    posts = JobPost.objects.all()
+    posts = JobPost.objects.filter(requirements=request.user.requirements)
     context_dict={"user":request.user}
+    context_dict["requirements":request.user.requirements]
     context_dict['posts']=posts
-    return render(request, 'jobSite/test.html', context_dict)
+
+    return render(request, 'jobSite/posts.html', context_dict)
+
+def employer(request):
+    return render(request, 'jobSite/employer.html')

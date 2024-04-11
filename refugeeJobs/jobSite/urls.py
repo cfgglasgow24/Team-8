@@ -5,6 +5,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', views.register, name='register'),
     path('home/', views.home, name='home'),
-    path('test/', views.all_posts, name='test')
+    path('posts/', views.all_posts, name='posts'),
+    path('employer',views.employer, name="employer"),
     # Include the URLs from myapp
 ]

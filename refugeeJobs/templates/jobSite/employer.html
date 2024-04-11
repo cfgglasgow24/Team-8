@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Application for Refugees</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            color: #5a5a5a;
+        }
+        label {
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #003d82;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employment Application for Refugees</h2>
+        <form action="/submit-your-application" method="post">
+            <label for="employerName">Employer Name:</label>
+            <input type="text" id="employerName" name="employerName" required>
+
+            <label for="contactEmail">Contact Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="jobDescription">Job Description:</label>
+            <textarea id="jobDescription" name="jobDescription" rows="4" required></textarea>
+
+            <label for="jobRequirements">Job Requirements:</label>
+            <textarea id="jobRequirements" name="jobRequirements" rows="4" required></textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="employmentType">Employment Type:</label>
+            <select id="employmentType" name="employmentType" required>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Temporary">Temporary</option>
+                <option value="Contract">Contract</option>
+                <option value="Internship">Internship</option>
+            </select>
+
+            <label for="specialConsiderations">Special Considerations for Refugees:</label>
+            <textarea id="specialConsiderations" name="specialConsiderations" rows="4"></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

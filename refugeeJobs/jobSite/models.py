@@ -8,6 +8,7 @@ class CustomUser(AbstractUser):
     language = models.CharField("Languages Spoken", max_length=255, blank=True)
     education = models.CharField(max_length=100, blank=True)
     experience = models.TextField("Work Experience", blank=True)
+    requirements = models.TextField()
 
 class JobPost(models.Model):
     title = models.CharField(max_length=255)

@@ -28,7 +28,6 @@
 <body>
     <h1>All Job Posts</h1>
     {% for post in posts %}
-        {% if user.education == post.education %}
             <div class="job-post">
                 <div class="job-title">{{ post.title }}</div>
                 <div class="job-info">
@@ -41,7 +40,6 @@
                     <p><strong>Qualifications:</strong> {{ post.qualifications }}</p>
                 </div>
             </div>
-        {% endif %}
     {% empty %}
         <p>No job posts match your requirements.</p>
     {% endfor %}
