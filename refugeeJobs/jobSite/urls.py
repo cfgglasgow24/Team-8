@@ -6,6 +6,6 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('home/', views.home, name='home'),
     path('posts/', views.all_posts, name='posts'),
-    path('employer',views.employer, name="employer"),
+    path('employer/',views.employer, name="employer"),
     # Include the URLs from myapp
 ]
