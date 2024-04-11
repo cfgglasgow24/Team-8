@@ -11,4 +11,4 @@ def register(request):
             return redirect('home')  # Redirect to a home page or dashboard
     else:
         form = CustomUserCreationForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'jobSite/register.html', {'form': form})
