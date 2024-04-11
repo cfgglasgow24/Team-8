@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', views.register, name='register'),
-    path('home/', views.register, name='home'),
+    path('home/', views.home, name='home'),
     path('test/', views.all_posts, name='test')
     # Include the URLs from myapp
 ]
