@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to (JobSeeker) </title>
+
+    <style>
+        .custom-button {
+            width: 500px;
+            height: 100px;
+        }
+        .image {
+            vertical-align: text-top;
+            width: 10px;
+            height: 10px;
+        }
+
+        .float-container {
+            display: flex;
+        }
+
+        .float-child {
+            flex: 1;
+        }
+
+<!--        .float-child:first-child {-->
+<!--            width: 50%;-->
+<!--            float: left;-->
+<!--        }-->
+
+    </style>
+</head>
+<body>
+
+<div class = "float-container">
+
+<div class="float-child">
+    <div class="float-child">
+    <img width="100" height="100" src="https://th.bing.com/th/id/R.fa0ca630a6a3de8e33e03a009e406acd?rik=MMtJ1mm73JsM6w&riu=http%3a%2f%2fclipart-library.com%2fimg%2f1905734.png&ehk=iv2%2fLMRQKA2W8JFWCwwq6BdYfKr2FmBAlFys22RmPI8%3d&risl=&pid=ImgRaw&r=0" alt="Profile">
+    </div>
+    <div class="float-child">
+    <button type="Button"  class="custom-button" id = "button1">Job Seeker</button>
+    </div>
+</div>
+
+<div class ="float-child">
+    <div>
+    <img width="100" height="100" src="https://th.bing.com/th/id/R.fa0ca630a6a3de8e33e03a009e406acd?rik=MMtJ1mm73JsM6w&riu=http%3a%2f%2fclipart-library.com%2fimg%2f1905734.png&ehk=iv2%2fLMRQKA2W8JFWCwwq6BdYfKr2FmBAlFys22RmPI8%3d&risl=&pid=ImgRaw&r=0" alt="Profile">
+    </div>
+    <div class="float-child">
+        <button type="Button" class = "custom-button" id = "button2">Job Provider</button>
+    </div>
+</div>
+
+</div>
+<script>
+    var button1 = document.getElementById("button1");
+    var surveyLink = "http://127.0.0.1:8000/jobSite/register/";
+
+    button1.addEventListener("click", function() {
+        window.location.href = surveyLink;
+    });
+</script>
+
+</body>
+</html>

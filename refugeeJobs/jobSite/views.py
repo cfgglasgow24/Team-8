@@ -12,3 +12,6 @@ def register(request):
     else:
         form = CustomUserCreationForm()
     return render(request, 'jobSite/register.html', {'form': form})
+
+def home(request):
+    return render(request, 'jobSite/home.html')
