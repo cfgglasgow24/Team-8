@@ -23,9 +23,44 @@
         .job-info p {
             margin: 5px 0;
         }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f9; color: #333;}
+        header, footer { background: #2465a7; color: white; padding: 10px 20px; text-align: center; }
+        nav { background: #2c7fb2; padding: 10px 20px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        main { padding: 20px; }
+        section { margin-bottom: 20px; background: white; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1, h2 { color: #2465a7; }
+        p, li { line-height: 1.6; }
+        ul { margin-top: 0; }
     </style>
 </head>
 <body>
+        <section id="translate-skills">
+            <h2>Translate Your Military and Police Skills</h2>
+            <p>Many of the skills you've developed in the military or police force are transferable to civilian jobs. Here’s how to present them on your CV:</p>
+            <ul>
+                <li><strong>Leadership and Management:</strong> Highlight your experience in leading teams, managing projects, and supervising others.</li>
+                <li><strong>Critical Thinking and Problem Solving:</strong> Showcase your ability to analyze situations, make decisions under pressure, and solve problems effectively.</li>
+                <li><strong>Technical Skills:</strong> Include any technical skills you've acquired, such as IT proficiency, mechanical skills, or knowledge of specialized equipment.</li>
+                <li><strong>Communication:</strong> Emphasize your ability to communicate clearly and effectively, both verbally and in writing, in diverse environments.</li>
+                <li><strong>Adaptability:</strong> Describe situations where you successfully adapted to new environments, cultures, and tasks.</li>
+                <li><strong>Security and Risk Management:</strong> Detail your experiences in security provision, risk assessment, and crisis management.</li>
+            </ul>
+        </section>
+        <section id="cv-tips">
+            <h2>General CV Writing Tips</h2>
+            <ul>
+                <li><strong>Keep it Concise:</strong> Limit your CV to two pages. Focus on relevant experiences and skills.</li>
+                <li><strong>Tailor Your CV:</strong> Customize your CV for each job application. Highlight the skills and experiences that match the job requirements.</li>
+                <li><strong>Use Action Verbs:</strong> Start bullet points with action verbs like managed, developed, coordinated, etc., to demonstrate your achievements.</li>
+                <li><strong>Include Achievements:</strong> Where possible, include measurable achievements to showcase your contributions.</li>
+                <li><strong>Professional Layout:</strong> Use a clean and professional layout with clear headings and bullet points for easy readability.</li>
+                <li><strong>Proofread:</strong> Always proofread your CV for errors in spelling and grammar. Consider asking someone else to review it as well.</li>
+            </ul>
+        </section>
+        <section id="job-listings">
+            <h2>Job Listings</h2>
+            <p>Explore current job opportunities suited to your skills and experiences:</p>
     <h1>All Job Posts</h1>
     {% for post in posts %}
             <div class="job-post">
@@ -43,5 +78,7 @@
     {% empty %}
         <p>No job posts match your requirements.</p>
     {% endfor %}
+        </section>
+
 </body>
 </html>
